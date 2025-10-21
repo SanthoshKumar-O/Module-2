@@ -2,7 +2,6 @@
 
 This project demonstrates a simple Python program to generate **Pascal’s Triangle**, where the number of rows is provided by the user.
 
----
 
 ## 🎯 Aim
 
@@ -19,17 +18,27 @@ To write a Python program that generates **Pascal's Triangle** using numbers. Th
    - Print appropriate spaces to shape the triangle.
    - Compute values using the formula:  
      \[
-     C(n, k) = \frac{n!}{k!(n-k)!}
+     val=val*(no.of rows - no.of val in each row)//no.of val in each row
      \]
 5. Print all rows of Pascal’s Triangle.
 6. End the program.
 
----
-
 ## 🧪 Program
-Add Code Here
-
+```
+n=int(input())
+val=1
+for i in range(1,n+1):
+    for s in range(1,n-i+1):
+        print("",end=" ")
+    for j in range(i):
+        if i==0 or j==0:
+            val=1
+        else:
+            val=val*(i-j)//j
+        print(val,end=" ")
+    print()
+```
 ## Sample Output
-
+![alt text](image-3.png)
 ## Result
-
+The python program to print pascal's triangle is executed successfully.
